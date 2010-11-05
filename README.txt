@@ -5,9 +5,22 @@
   What is this?
   -------------
 
-  Timeline is a DHTML-based AJAXy timeline.
+  Timeline is a DHTML-based AJAXy timeline developed as part of the SIMILE
+  project (see http://www.simile-widgets.org/timeline/).
+  
+  This version starts from Timeline v2.3.0 and modifies a few things. The
+  main modification consists in removing the dependency on jQuery that was
+  considered as an overshoot in a context where jQuery alternatives like
+  Prototype or DOJO are already used.
+  
+  Therefore, jQuery is no more bundled and loaded in SIMILE Ajax library. 
+  It is no more used either by Timeline. Fortunately, in the original v2.3.0,
+  it is only used once to get an animation effect when the timeline is resized.
 
-
+  The author of this fork wants to thank original Timeline contributors for the
+  excellent work they have been doing to make this awesome Javascript widget 
+  available to everyone.
+  
   Running Timeline
   ----------------
 
@@ -70,7 +83,7 @@
   This software was created by the SIMILE project and originally written
   by the SIMILE development team (in alphabetical order):
 
-   - David François Huynh <dfhuynh at csail.mit.edu>
+   - David FranÃ§ois Huynh <dfhuynh at csail.mit.edu>
 
 
 
