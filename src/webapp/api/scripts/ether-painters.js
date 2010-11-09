@@ -563,14 +563,15 @@ Timeline.EtherHighlight = function(timeline, band, theme, backgroundLayer) {
         var startPixel = Math.round(band.dateToPixelOffset(startDate));
         var endPixel = Math.round(band.dateToPixelOffset(endDate));
         var length = Math.max(endPixel - startPixel, 3);
+        var bandWidth = Math.max(band.getViewWidth(), 4); 
         if (horizontal) {
             this._highlightDiv.style.left = startPixel + "px";
-            this._highlightDiv.style.width = length + "px";           
-            this._highlightDiv.style.height = (band.getViewWidth() - 4) + "px";
+            this._highlightDiv.style.width = length + "px";
+            this._highlightDiv.style.height = (bandWidth - 4) + "px";
         } else {
             this._highlightDiv.style.top = startPixel + "px";
             this._highlightDiv.style.height = length + "px";
-            this._highlightDiv.style.width = (band.getViewWidth() - 4) + "px";
+            this._highlightDiv.style.width = (bandWidth - 4) + "px";
         }
     }
 };
